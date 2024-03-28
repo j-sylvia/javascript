@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nums=[2,3,9,6,6,5,7,0,9,9]
+        function getSecondLargest(nums) {
+    // Complete the function
+    nums.sort(function(a,b){
+        return a-b;
+    });
+    for(let i=nums.length-2;i>=0;i--){
+        if(nums[i]!==nums[nums.length-1]){
+            return nums[i];
+        }
+    }
+}
+document.write(`Second largest no: ` +getSecondLargest(nums)); // 6(nums);
+    </script>
+</body>
+</html>

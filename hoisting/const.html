@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a=10;
+        // a=10;
+        function sample(){
+            // return a;
+            document.write(a)
+        }
+        // document.write(a)
+        sample()
+
+        
+        
+        if(a>30){
+            document.write(`<br>${a} is greater<br>`);
+        }
+        else{
+            document.write(`<br>${a} is smaller<br>`);
+        }
+        // let b;
+        // const a=20;
+
+        if (true) {
+            const x = 20;
+            document.write(`<br>${x} inside block<br>`); // Accessible within this block
+        }
+        document.write(x); // Error: x is not defined outside the block
+
+        //const initialization should be hoisted to the top like let keyword.
+    </script>
+</body>
+</html>

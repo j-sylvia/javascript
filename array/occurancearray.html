@@ -1,0 +1,24 @@
+<script>
+    //search for an occurance of an element in an array
+
+    a=[]
+    n=Number(prompt("Enter the no.of elements in array"))
+    for(i=0;i<n;i++){
+        no=Number(prompt("Enter the elements in array"))
+        a.push(no)
+    }
+    document.write(a+"<br>")
+    
+    flag=true
+    item=Number(prompt("Enter the element to be searched"))
+    for(i=0;i<n;i++){
+        if(a[i]===item){
+            flag=false
+            break
+        }
+    }
+    if(flag==false)
+        document.write("Found")
+    else
+        document.write("Not found")
+</script>

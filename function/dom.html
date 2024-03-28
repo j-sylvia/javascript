@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            background-color: rgb(120, 152, 180);
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" onclick="change()">
+Helloo
+    </div>
+    <div class="div1"> TN</div>
+    <div class="div1"> Kochi</div>
+    <div class="div1"> Kochi</div>
+    <div class="div1"> Kochi</div>
+    <div class="div1"> Kochi</div>
+    <div class="div1"> Kochi</div>
+    <div class="div1"> Kochi</div>
+    <button onclick="detail()">Click Me</button>
+    <button onclick="colorchange()">Click to change color</button>
+    <script>
+        function change(){
+            val=document.getElementById("div1").innerHTML
+            alert(val)
+            document.getElementById("div1").innerHTML="Haii"
+        }
+        function detail(){
+            document.getElementsByTagName("div")[2].innerHTML="calicut"
+            document.getElementsByTagName("div")[3].innerHTML="kochi"
+            document.getElementsByTagName("div")[4].innerHTML="tvm"
+            document.getElementsByTagName("div")[5].innerHTML="calicut"
+            document.getElementsByTagName("div")[6].innerHTML="kochi"
+            document.getElementsByTagName("div")[7].innerHTML="tvm"
+        }
+        function colorchange(){
+            a=document.getElementsByClassName("div1")
+            console.log(a)
+            for(i=0;i<a.length;i++){
+                if(i%2==0)
+                    a[i].style.color="red"
+                else
+                    a[i].style.color="green"
+            }
+        }
+    </script>
+</body>
+</html>

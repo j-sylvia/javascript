@@ -1,0 +1,33 @@
+<script>
+    bs=Number(prompt("Enter basic salary"))
+    n=Number(prompt("Enter the no.of night shifts done"))
+    if(bs<10000){
+        hra=(3/bs)*100
+        da=(5/bs)*100
+        pf=(7/bs)*100
+        allowance=n*500
+
+    }
+    else if(bs>=10000 && bs<20000){
+        hra=(4/bs)*100
+        da=(6/bs)*100
+        pf=(8/bs)*100
+        allowance=n*700
+
+    }
+    else if(bs>=20000 && bs<30000){
+        hra=(5/bs)*100
+        da=(7/bs)*100
+        pf=(9/bs)*100
+        allowance=n*900
+
+    }
+    else{
+        hra=(7/bs)*100
+        da=(8/bs)*100
+        pf=(10/bs)*100
+        allowance=n*1100
+    }
+    ns=bs+hra+da-pf
+    alert(`Net Salary is ${ns}, Allowance is ${allowance}`)
+</script>

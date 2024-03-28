@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // s="javascript"
+        // for(i=0;i<s.length;i++){
+        //  console.log(s[i])
+        //     if(s[i]=="a" || s[i]=="e" ||s[i]=="i" || s[i]=="o" || s[i]=="u"){
+        //         console.log(s[i])
+        //     }
+        // }
+
+        s=prompt("Enter the string")
+        v="aeiouAEIOU"
+        c=0
+        for(i=0;i<s.length;i++){
+            if(v.includes(s[i])){
+                c++
+            }
+        }
+        document.write(`<h1>${s}</h1>`)
+        document.write(`<h1>${c}</h1>`)
+    </script>
+</body>
+</html>

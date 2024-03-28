@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center" style="background-color: rgb(178, 227, 227)">
+    <h1>Student Marklist</h1>
+    <form name="f1">
+        Enter the mark for sub1: <input type="number" name="t1"><br><br>
+        Enter the mark for sub2: <input type="number" name="t2"><br><br>
+        Enter the mark for sub3: <input type="number" name="t3"><br><br>
+        <input type="button" onclick="calc()" value="Calculate"><br><br>
+
+        <b>Total: </b> <input type="number" name="t4" readonly> &nbsp;&nbsp;
+        <b>Average: </b> <input type="number" name="t5" readonly> &nbsp;&nbsp;
+        <b>Grade: </b> <input type="text" name="t6" readonly>  
+    </form>
+    <script>
+        function calc(){
+            sub1=Number(document.f1.t1.value)
+            sub2=Number(document.f1.t2.value)
+            sub3=Number(document.f1.t3.value)
+            total=sub1+sub2+sub3
+            avg=total/3
+            document.f1.t4.value=total
+            document.f1.t5.value=avg
+
+        if(avg<45){
+            grade="Fail"
+        }
+        else if(avg>=45 && avg<=60){
+            grade="E"
+        }
+        else if(avg>60 && avg<=70){
+            grade="D"
+        }
+        else if(avg>70 && avg<=80){
+            grade="C"
+        }
+        else if(avg>80 && avg<=90){
+            grade="B"
+        }
+        else{
+            grade="A"
+        }
+        document.f1.t6.value=grade
+    }
+    </script>
+</body>
+</html>

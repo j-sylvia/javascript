@@ -1,0 +1,55 @@
+<script>
+    class person{
+        constructor(n,a,r,p,add){
+            this.name=n
+            this.age=a
+            this.role=r
+            this.phno=p
+            this.address=add
+        }
+        introduce(){
+            console.log(`I am ${this.name}, ${this.age}, ${this.role}`)
+        }
+    }
+    class student extends person{
+        constructor(n,a,r,p,add,b){
+            super(n,a,r,p,add)
+            this.batch=b
+        }
+        stud(){
+            console.log(`I am ${this.name}, ${this.age}, ${this.role}, ${this.batch}`)
+        }
+    }
+    class inter extends student{
+        constructor(n,a,r,p,add,inte){
+            super(n,a,r,p,add)
+            this.internshi=inte
+        }
+        internship(){
+            console.log(`I am ${this.name}, ${this.age}, ${this.role}, ${this.internshi}`)
+        }
+    }
+    class teacher extends person{
+        constructor(n,a,r,p,add,e,su,sa){
+            super(n,a,r,p,add)
+            this.empid=e
+            this.sub=su
+            this.sal=sa
+        }
+        teach(){
+            console.log(`I am ${this.name}, ${this.age}, ${this.role}, ${this.empid}, ${this.sub}, ${this.sal}`)
+        }
+    }
+    p=new person("Aparna",21,"student",8773875,"Kollam")
+    p.introduce()
+    s=new student("Ajin",23,"student",993244,"TVM","A")
+    s.stud()
+    s.introduce()
+    t = new teacher("Govind", 25, "teacher", 8773875, "alp", 12, "maths", 50000)
+    t.introduce()
+    t.teach()
+    i=new inter("Lakshmi",26,"intern",7645832,"nagercoil",12)
+    
+    i.internship()
+
+</script>

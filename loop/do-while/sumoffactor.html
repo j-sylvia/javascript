@@ -1,0 +1,13 @@
+<script>
+    n=Number(prompt("Enter the number to find factors"))
+   i=1
+   s=0
+   do{
+       if(n%i==0){
+       document.write(`<b>${i}, </b>`)
+        s=s+i
+       }
+       i+=1
+   }while(i<=n)
+   document.write(`<h3>Sum of factors:${s}</h3>`)
+   </script>

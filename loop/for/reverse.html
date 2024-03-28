@@ -1,0 +1,13 @@
+<script>
+    n=Number(prompt("Enter the number to find reverse of a number"))
+    rev=0
+   
+    for(;n!=0;){
+        rem=n%10
+        rev=rev*10+rem
+        n=Math.floor(n/10)
+    }
+    document.write(`${rev}`)
+    
+</script>
+

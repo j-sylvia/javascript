@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function spy(n){
+            spy=n
+            s=0
+            p=1
+            while(n>0){
+                rem=n%10
+                s=s+rem
+                p=p*rem
+                v1=Math.floor(n/10)
+            } 
+            if(s==p){
+                    document.write(`<h5 class="container text-secondary">${spy} is a spy number</h5>`)
+            }
+                else{
+                    document.write(`<h5 class="container text-secondary">${spy} is not a spy number</h5>`)
+                }
+        }
+        function neon(n){
+            t=n*n
+            s=0
+            while(t>0){
+                rem=t%10
+                s=s+rem
+                t=parseInt(t/10)
+            }
+            if(s==n){
+                document.write("Neon number")
+            }
+            else{
+                document.write("Not a Neon number")
+            }
+        }
+        function automorphic(n){
+            num=n
+        t=10
+        sq=num*num
+        flag=false
+        while(n>0){
+            r=sq%t 
+            if(num==r){
+                flag=true
+                break
+            }
+        n=parseInt(n/10)
+        t=t*10
+        }
+        if(flag==true){
+            document.write("Automorphic")
+        }
+        else{
+            document.write("Not Automorphic")
+        }
+        }
+        function palindrome(n){
+            temp=n
+            rev=0
+            while(n>0){
+                rem=n%10
+                rev=rev*10+rem
+                n=parseInt(n/10)
+            }
+            if(rev==temp){
+                document.write(`${temp} is a palindrome`)
+            }
+            else{
+                document.write(`${temp} is not a palindrome`)
+            }
+        }
+        document.write(`<br>'1. Automorphic' , '2. Palindrome' , '3. Neon' , '4. Spy'`)
+        
+        num=Number(prompt("Enter the number"))
+        ch=Number(prompt("Enter the choice"))
+        
+            switch(ch){
+            case '1': automorphic(num)
+            break
+
+            case '2': palindrome(num)
+            break
+
+            case '3': neon(num)
+            break
+
+            case '4': 
+            document.write(spy(num))
+            break
+
+            default: alert("Invalid")
+        }
+        
+    </script>
+</body>
+</html>

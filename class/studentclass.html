@@ -1,0 +1,42 @@
+<script>
+    class student{
+        //constructor method
+        constructor(n,p,m1,m2,m3){
+            this.name=n
+            this.phno=p
+            this.m1=m1
+            this.m2=m2
+            this.m3=m3
+            this.tot=0
+        }
+        //prototype method
+        calculate_total(){
+            this.tot=this.m1+this.m2+this.m3
+        }
+        displaydetails(){
+            document.write("Name of the student: " +this.name+"<br>")
+            document.write("Phone Number: " +this.phno+"<br>")
+            document.write("Total Mark: " +this.tot+"<br>")
+            document.write("<hr>")
+        }
+        //static method
+        static sample(){
+            console.log("Sample")
+        }
+    }
+    ob1=new student("Lakshmi",6776767,50,60,70)
+    ob2=new student("Govind",898989,60,80,90)
+    ob3=new student("Silvia",555555,40,90,90)
+    ob4=new student("Aparna",997823,40,80,70)
+
+    ob1.calculate_total()
+    ob2.calculate_total()
+    ob3.calculate_total()
+    ob4.calculate_total()
+
+    ob1.displaydetails()
+    ob2.displaydetails()
+    ob3.displaydetails()
+    ob4.displaydetails()
+    student.sample()
+</script>

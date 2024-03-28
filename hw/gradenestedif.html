@@ -1,0 +1,32 @@
+<script>
+    sub1=Number(prompt("Enter the mark for sub1"))
+    sub2=Number(prompt("Enter the mark for sub2"))
+    sub3=Number(prompt("Enter the mark for sub3"))
+    if(sub1>45 && sub2>45 && sub3>45){
+        total=sub1+sub2+sub3
+        avg=total/3
+        percentage=(total/300)*100
+        if(avg>45 && avg<=60){
+            grade="E"
+        }
+        else if(avg>60 && avg<=70){
+            grade="D"
+        }
+        else if(avg>70 && avg<=80){
+            grade="C"
+        }
+        else if(avg>80 && avg<=90){
+            grade="B"
+        }
+        else{
+            grade="A"
+        }
+        alert(`Total: ${total}, Average: ${avg}, Percentage: ${percentage}, Grade: ${grade}`)
+     
+    }
+    else{
+        grade="Fail"
+        alert(`Grade: ${grade}`)
+        }
+    
+</script>

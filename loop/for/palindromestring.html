@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str1=prompt("Enter a string")
+        l=str1.length;
+        j=0
+        flag=1
+        for(i=l-1;i>=l/2;i--){
+            if(str1[j]!=str1[i]){
+                flag=0
+                break;
+            }
+            j++
+        }
+        if(flag==0){
+            document.write(`Not a Palindrome`)
+        }
+        else{
+            document.write(`Palindrome`)
+        }
+        
+    </script>
+</body>
+</html>

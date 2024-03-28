@@ -1,0 +1,48 @@
+<head></head>
+<script>
+    a=[5,8,9,4,3,2,1,4,6,7,8]
+
+    document.write(`<h2>Array: [${a}] <h2>`)
+
+    document.write(`<h3>Length: ${a.length} </h3>`)
+
+    a.pop()//removes the last element
+    document.write(`<h3>Pop: ${a} </h3>`)
+
+    a.unshift(8)//adds the specified in the starting of array and shift other elements to one position right
+    document.write(`<h3>Unshift: ${a} </h3>`)
+
+    a.shift()//removes the first element
+    document.write(`<h3>Shift: ${a} </h3>`)
+
+    a.splice(5,0,100)//add 100 in 5th index. 5->index, 0->replace or add, 1->removes 5th index and replace, 2->removes 5th and next index and replace
+    document.write(`<h3>Splice: ${a} </h3>`)
+
+    a.sort()
+    document.write(`<h3>Sort: ${a} </h3>`)
+
+    b=['abc','efg','asd','ewt','eryrt']
+    b.sort()
+    document.write(`<h3>Sort: ${b}</h3>`)
+
+    // var result=a.sort(function compare(a,b){
+    //     return a-b;
+    // });
+    // document.write(`<h3>Sort using function: ${a}</h3>`)
+
+
+    //bubble sort without function
+    
+    
+    for(i=1;i<a.length;i++){
+        if(a[i-1]>a[i]){
+            temp=a[i-1]
+            a[i-1]=a[i]
+            a[i]=temp
+            
+        }
+    }
+    
+    document.write(`<h3>Sort: ${a} </h3>`)
+
+</script>

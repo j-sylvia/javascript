@@ -1,0 +1,62 @@
+<script>
+    class customer{
+        constructor(u){
+            this.unit=u
+            
+        }
+        calculateBill(){
+            this.price=this.unit*10
+        }
+        displayBill(){
+            document.write(`Total Bill: ${this.price} <br>`)
+        }
+    }
+
+    class residentialcustomer extends customer{
+        constructor(u,fm){
+            super(u)
+            this.familymembers=fm
+        }
+        calculateBill(){
+            this.price=this.unit*8-(this.familymembers*2)
+        }
+        displayBill(){
+            document.write(`Total Bill for Residential Customer: ${this.price} <br>`)
+        }
+    }
+
+    class commercialcustomer extends customer{
+        constructor(u,b){
+            super(u)
+            this.businesstype=b
+        }
+        calculateBill(){
+            
+            if(this.businesstype=="small"){
+                this.price=(this.unit*12)-((10/(this.unit*12))*100)
+            }
+            else if(this.businesstype=="large"){
+                this.price=(this.unit*12)+((this.unit*12)*10)
+            }
+        }
+        displayBill(){
+            document.write(`Total Bill for Commercial Customer: ${this.price} <br>`)
+        }
+    } 
+
+    u=Number(prompt("Enter the unit"))
+    c=new customer(u)
+    c.calculateBill()
+    c.displayBill()
+
+    f=Number(prompt("Enter the no.of family members"))
+    rc=new residentialcustomer(u,f)
+    rc.calculateBill()
+    rc.displayBill()
+
+    b=prompt("Enter the business type: 'small' or 'large'")
+    cc=new commercialcustomer(u,b)
+    cc.calculateBill()
+    cc.displayBill()
+
+</script>

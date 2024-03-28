@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=number]{
+            height: 25px;
+            width: 320px;
+        }
+        
+    </style>
+</head>
+<body style="background-color: blueviolet;">  
+    <form name="f1" style="background-color: aliceblue;margin: 100px auto;width: 355px;height: 500px;padding: 20px 50px;border-radius: 10px;">
+        <h1 style="text-align: center;padding-bottom: 10px ;">Loan Calculator</h1>
+        <h4>Loan Amount: </h4> <input type="number" id="amount"><br><br>
+        <h4>Interest Rate: </h4> <input type="number" id="interest"><br><br>
+        <h4>Months to pay: </h4> <input type="number" id="months"><br><br><br>
+        <center><input type="button" onclick="calculate()" value="CALCULATE"></center>
+        <h3 id="payment"></h3>
+    </form>
+    <script>
+        function calculate(){
+            a=document.getElementById("amount").value;
+            i=document.getElementById("interest").value;
+            m=document.getElementById("months").value;
+            r = (a * (i * 0.01)) / m;
+            p = ((a / m) + r).toFixed(2);
+            document.getElementById("payment").innerHTML="Monthly Payment = " +p
+        }
+    </script>
+</body>
+</html>

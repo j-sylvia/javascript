@@ -1,0 +1,23 @@
+<script>
+    class circle{
+        constructor(r){
+            this.radius=r;
+        }
+        circle_area(){
+            this.area=3.14*this.radius*this.radius;
+            this.circumference=2*3.14*this.radius;
+        }
+        display_circle(){
+            document.write("Area of circle: "+this.area+"<br>")
+            document.write("Circumference of circle: "+this.circumference+"<br>")
+        }
+
+    }
+    obj1=new circle(6);
+    obj1.circle_area();
+    obj1.display_circle();
+
+    obj1=new circle(7);
+    obj1.circle_area();
+    obj1.display_circle();
+</script>

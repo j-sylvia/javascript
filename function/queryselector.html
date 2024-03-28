@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="tag1">Good Morning</h1>
+    <p class="tag1">Hii</p>
+    <h2 class="tag1">Hello</h2>
+    <button onclick="change()">Click Me</button>
+    <script>
+        function change(){
+            a=document.querySelectorAll(".tag1")[1].innerHTML;
+            alert(a)
+            // a=document.querySelectorAll(".tag1");
+            // alert(a[1].innerHTML)
+        }
+    </script>
+</body>
+</html>

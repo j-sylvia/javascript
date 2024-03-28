@@ -1,0 +1,16 @@
+<script>
+    bs=Number(prompt("Enter basic salary"))
+    if(bs>10000){
+        hra=(2/bs)*100
+        pf=(3/bs)*100
+        da=(5/bs)*100
+
+    }
+    else{
+        hra=(5/bs)*100
+        pf=(7/bs)*100
+        da=(9/bs)*100
+    }
+    ns=bs+hra+da-pf
+    alert(`Net Salary is ${ns}`)
+</script>

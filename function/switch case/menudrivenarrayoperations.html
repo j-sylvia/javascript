@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Enter the operation: <input type="text" id="operator" placeholder="Enter the choice"><br><br>
+        <input type="button" value="Click" onclick="dispoperation()">
+    </form>
+    <script>
+        document.write(`<br>'1. Insertion' , '2. Sorting' , '3. Searching' `)
+        function insertion(){
+            a.push(0)
+            element=Number(prompt("Enter the element to be inserted"))
+            index=Number(prompt("Enter the index of the element to be inserted"))
+            for(i=n;i>index;i--){ 
+                a[i]=a[i-1]   
+            }
+            a[index]=element
+            document.write("List elements are:" +a)
+        }
+        function dispoperation(){
+            op=document.getElementById('operator').value;
+
+            a=[]
+            n=Number(prompt("Enter the no.of elements in array"))
+            for(i=0;i<n;i++){
+                no=Number(prompt("Enter the elements in array"))
+                a.push(no)
+            }
+            document.write(a+"<br>")
+
+
+            switch(op){
+
+            case '1': 
+            document.write(insertion())
+
+            break
+
+            case '2':
+            for(i=0;i<n-1;i++){ //pass
+                for(j=0;j<n-1;j++){
+                    if(a[j]>a[j+1]){
+                    temp=a[j+1]
+                    a[j+1]=a[j]
+                    a[j]=temp
+                    }
+                }
+            }
+        document.write(a+"<br>") 
+            
+            break
+
+            case '3': 
+            flag=true
+            item=Number(prompt("Enter the element to be searched"))
+            for(i=0;i<n;i++){
+                if(a[i]===item){
+                    flag=false
+                    break
+                }
+            }
+            if(flag==false)
+                document.write("Found")
+            else
+                document.write("Not found")
+                    
+            break
+
+            default: alert("Invalid")
+        }
+    }  
+    </script>
+</body>
+</html>

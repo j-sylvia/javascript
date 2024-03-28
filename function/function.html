@@ -1,0 +1,35 @@
+<head></head>
+<script>
+    function add(){
+        sum=5+9
+        return sum;
+    }
+    a=add()
+    document.write(`<h2>${a}</h2>`)
+
+    function sub(a,b){
+        val=a-b
+        return val;
+    }
+    subt=sub(5,4)
+    document.write(`<h2>${subt}</h2>`)
+
+    function abc(no1,no2){
+      ab=no1+no2
+      return ab;
+    }
+    no1=Number(prompt("Enter the value"))
+    no2=Number(prompt("Enter the value"))
+    s=abc(no1,no2)
+    document.write(`<h2>${s}</h2>`)
+
+    function prod(p1,p2){
+      p=p1*p2
+      return(p);
+      p=p+1 //wont work after return; returns the same value
+      document.write(`<h2>${p}</h2>`)
+    }
+
+    g=prod(5,4)
+    document.write(`<h2>${g}</h2>`)
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a;
+        a=10;
+        function sample(){
+            // return a;
+            document.write(a)
+        }
+        sample()
+        
+        
+
+    //    var b; 
+        b=20;
+        if(b>30){
+            document.write(`<br>${a}`);
+        }
+        else{
+            document.write(`<br>${b}`);
+        }
+        var b;
+        // b=20;
+        //If initialization is not hoisted it will return undefined.
+        
+        
+        if (true) {
+            // var x;
+            x = 30;
+            
+            document.write(`<br>${x} inside block<br>`); // Accessible within this block and outside
+        }
+        document.write(x); 
+        var x;
+
+        //variable initialization must be hoisted to the top of their scope. It works if declaration is not hoisted to the top.
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="in">
+    <button onclick="change()">Click ME</button>
+    <div id="div1"></div>
+    <div>h</div>
+    <div>e</div>
+    <div>l</div>
+    <div>l</div>
+    <div>o</div>
+    <div>h</div>
+    <div>a</div>
+    <div>i</div>
+<script>
+    function change(){
+        a=Number(document.getElementsByName('in')[0].value)
+        a++
+        console.log(a)
+        document.getElementById('div1').innerHTML=a
+        b=document.getElementsByTagName('div')
+        console.log(b)
+        for(i=0;i<b.length;i++){
+            if(b[i].innerHTML=='e'){
+                b[i].innerHTML="changed"
+            }
+        }
+        for(i=0;i<b.length;i++){
+            if(b[i].innerHTML=='h'){
+                b[i].style.color="yellow"
+            }
+        }
+        for(i=0;i<b.length;i++){
+            if(b[i].innerHTML=='l'){
+                b[i].setAttribute("style","background-color:red")
+            }
+        }
+        for(i=0;i<b.length;i++){
+            if(b[i].innerHTML=='i'){
+                d=document.createElement("h1")
+                d.innerHTML="Hai"
+                b[i].appendChild(d)
+            }
+        }
+    }
+</script>
+</body>
+</html>

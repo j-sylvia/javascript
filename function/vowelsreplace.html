@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        s="Malayalam"
+        v="aeiouAEIOU"
+        newstr=""
+        for(i=0;i<s.length;i++){
+            if(v.includes(s[i])){
+               newstr=newstr+"*"
+            }
+            else{
+                newstr=newstr+s[i]
+            }
+        }
+        document.write(`<h1>${s}</h1>`)
+        document.write(`<h1>${newstr}</h1>`)
+    </script>
+</body>
+</html>

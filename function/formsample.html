@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        li{
+            list-style-type: none;
+            display: inline;
+            margin: 0 20px;
+            font-size: large;
+            
+        }
+        li a{
+            text-decoration: none;
+            
+        }
+        .navbar{
+            width: 100%;
+            height:60px;
+            position: sticky;
+            background-color: antiquewhite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        input[type="text"],input[type="password"],input[type="submit"],select,.g{
+            width: 100%;
+            height: 30px;
+            /* display: inline-block; */
+            margin: 10px 0;
+        }
+        textarea{
+            width: 100%;
+            height: 70px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        input[type=radio]{
+            margin: 0 20px;
+        }
+        form{
+            width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <form action="" name="f1">
+            <input type="text" name="name" placeholder="Enter your name">
+            <input type="password" name="password" placeholder="Enter your password">
+            <div class="g">Gender: <input type="radio" name="gender" value="Male">Male
+                <input type="radio" name="gender" value="Female">Female</div>
+            
+            <select name="country" id="country">
+                <option name="country" value="Select your country" selected disabled>Select your country</option>
+                <option value="India">India</option>
+                <option value="US">US</option>
+                <option value="UK">UK</option>
+            </select>
+            <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter your address"></textarea>
+
+            <input type="checkbox" name="consent">I agree to the terms and conditions.
+    
+            <input type="button" onclick="check()" value="SUBMIT">
+        </form>
+    </div>
+    <script>
+        function check(){
+            let x=document.f1.name.value;
+            if(x==""){
+                alert("Name must be filled out")
+            }
+        }
+    </script>
+</body>
+</html>

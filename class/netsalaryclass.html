@@ -1,0 +1,22 @@
+<script>
+    class netsalary{
+        constructor(b){
+            this.bs=b
+        }
+        net_salary(){
+         this.da=(20/this.bs)*100
+         this.hra=(25/this.bs)*100
+         this.pf=(5/this.bs)*100
+         this.ns=this.da+this.hra+this.bs-this.pf
+         document.write("Net Salary: "+this.ns+"<br>")
+         
+        }
+        // displaynetsalary(){
+        //     document.write("Net Salary: "+this.ns+"<br>")
+        // }
+    }
+    b=Number(prompt("Enter the basic salary"))
+    obj1=new netsalary(b)
+    obj1.net_salary();
+    // obj1.displaynetsalary();
+</script>

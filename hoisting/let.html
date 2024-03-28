@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a;
+        a=10;
+        function sample(){
+            // return a;
+            document.write(a)
+        }
+        sample()
+
+        let b;
+        b=20;
+        if(b>30){
+            document.write(`<br>${a}`);
+        }
+        else{
+            document.write(`<br>${b}`);
+        }
+        //let b;
+        //If declaration is not hoisted to the top in let, it wont work and the rest of the block will not be executed after that.
+
+
+        //let x; 
+        //if declared outside and initialized inside the block, it will work inside and outside the block. If declared and initialized inside the block it wont work outside the block.
+        if (true) {
+            let x;
+            x = 30;
+            document.write(`<br>${x} inside block<br>`); // Accessible within this block
+        }
+        document.write(x); // Error: x is not defined outside the block
+
+        //initialization and declaration should be hoisted in let keyword
+    </script>
+</body>
+</html>

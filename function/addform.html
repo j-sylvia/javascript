@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f1">
+        Enter a number: <input type="number" name="t1">
+        Enter a number: <input type="number" name="t2">
+        Result: <input type="number" name="t3" readonly>
+        <input type="button" onclick="add()" value="Click to add">
+    </form>
+    <script>
+        function add(){
+            a=Number(document.f1.t1.value)
+            b=Number(document.f1.t2.value)
+            c=a+b
+            document.f1.t3.value=c
+        }
+    </script>
+</body>
+</html>

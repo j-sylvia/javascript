@@ -1,0 +1,28 @@
+<script>
+    //count for an occurance of an element in an array
+
+    a=[]
+    pr=[]
+    n=Number(prompt("Enter the no.of elements in array"))
+    for(i=0;i<n;i++){
+        no=Number(prompt("Enter the elements in array"))
+        a.push(no)
+    }
+    document.write(a+"<br>")
+    document.write("<br>Prime array is<br>")
+    for(i=0;i<n;i++){
+        if(a[i]!=0 && a[i]!=1){
+            for(j=2;j<a[i];j++){
+                if(a[i]%j==0){
+                    break
+                }
+            }
+           if(j==a[i]) {
+            pr.push(a[i])
+           }
+        }
+    }
+        document.write(pr)
+    
+    
+</script>

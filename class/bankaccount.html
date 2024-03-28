@@ -1,0 +1,75 @@
+<script>
+    class BankAccount{
+        constructor(accno,acchol,bal){
+            this.accountno=accno;
+            this.accountholder=acchol;
+            this.balance=bal;
+            
+        }
+        deposit(amount){
+            this.balance=this.balance+amount;
+            document.write(`Deposited Amount: ${amount}, New Balance: ${this.balance}`);
+        }
+        withdraw(amount){
+            if(amount<=this.balance){
+                this.balance=this.balance-amount;
+                document.write(`Withdrawn Amount: ${amount}, New Balance: ${this.balance}`);
+            }
+            else{
+                document.write("Insufficient amount")
+            }
+           
+        }
+        displayBalance(){
+            document.write(`Total Balance of ${this.accountholder}: ${this.balance} <br>`);
+        }
+    }
+
+    class SavingsAccount extends BankAccount{
+        constructor(accno,acchol,bal,ir){
+            super(accno,acchol,bal);
+            this.interestrate=ir;
+        }
+        // deposit(amount){
+        //     this.balance=this.balance+(this.balance*this.interestrate);
+        // }
+        calculateInterest(){
+            interest=this.balance*(this.interestrate/100);
+            this.deposit(interest);
+            document.write(`Interest Earned: ${interest} <br>`);
+        }
+    }
+
+    class CurrentAccount extends BankAccount{
+        constructor(accno,acchol,bal,ol){
+            super(accno,acchol,bal);
+            this.overdraftlimit=ol;
+        }
+        withdraw(amount){
+            availablebalance=this.balance+this.overdraftlimit;
+            if (amount <=availablebalance) {
+                this.balance-=amount;
+            document.write(`Withdrawn amount: ${amount}, New Balance: ${this.balance}<br>`);
+        } else {
+            document.write(`Transaction Declined. Overdraft Limit exceeded<br>`);
+        }
+        }
+        
+    } 
+
+    // b=new BankAccount(1213,"sylvia",40000);
+    // b.deposit(20000);
+    // b.withdraw(10000);
+    // b.displayBalance();
+
+    sa=new SavingsAccount(1214,"jasme",1000,2);
+    sa.deposit(500);
+    sa.calculateInterest();
+    sa.withdraw(200);
+    sa.displayBalance();
+
+    ca=new CurrentAccount(1215,"lakshmi",2000,500);
+    ca.withdraw(1500);
+    ca.displayBalance();
+
+</script>

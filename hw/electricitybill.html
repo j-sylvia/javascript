@@ -1,0 +1,17 @@
+<script>
+    unit=Number(prompt("Enter the units consumed"))
+    if(unit<100){
+    price=unit*50
+    }
+    else if(unit>=100 && unit<200){
+        price=100*50 + (unit-100)*75
+        
+    }
+    else if(unit>=200 && unit<300){
+        price=100*50 + 100*75 + (unit-200)*125
+    }
+    else{
+        price=100*50 + 100*75 + 100*125 + (unit-300)*200
+    }
+    alert(`Total bill amount: ${price}`)
+</script>
