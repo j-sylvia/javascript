@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var arr=[2,3,9,6,6,5,7,0,9,9]
+        
+        arr.sort()
+        document.write(arr+"<br>")
+    
+        for (let i = arr.length - 2; i >= 0; i--) { 
+            if (arr[i] !== arr[arr.length - 1]) { 
+            document.write("The second largest element is " + arr[i]);
+            break; 
+        } 
+        }
+        // document.write(arr[arr.length-1]+"<br>")
+        
+    
+    </script>
+</body>
+</html>
+

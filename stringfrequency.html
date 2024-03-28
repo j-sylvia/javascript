@@ -1,0 +1,17 @@
+<script>
+str=prompt("Enter a string");
+words=str.split(" ");
+console.log(words);
+const frq={}
+    for(i=0;i<words.length;i++){
+      if(words[i] in frq){
+            frq[words[i]]++
+      }
+    else{
+        frq[words[i]]=1
+    }
+    }
+    console.log(frq);
+
+
+</script>
